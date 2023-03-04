@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    color: var(--colorLight2);
+    background-color: #112d4e;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+
+#wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;  
+}
+
+.main-container {
+    position: relative;
+}
+
+.heading {
+    padding: 30px 0;
+    text-align: center;
+    color: var(--colorLight2);
+    word-spacing: 2px;
+    letter-spacing: 1.75px;
+}
+
+.tab-section {
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 30px 0;
+}
+.tab-section p {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 5px;
+}
+.current-tab {
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+.container {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* opacity: 0; */
+}
+
+.city-name {
+    /* border: 1px solid blue; */
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+}
+.city-name p {
+    font-size: 2rem;
+    font-weight: 200;
+}
+.country-image{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.desc {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.weatherIcon {
+    width: 90px;
+    height: 90px;
+}
+.temp {
+    font-size: 2.75rem;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.three-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.windspeed {
+    /* border: 1px solid red; */
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.windspeed img {
+    width: 50px;
+    height: 50px;
+}
+.windspeed p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.active {
+    opacity: 1;
+    /* scale: 1; */
+}
+
+.nonactive {
+    opacity: 0;
+    scale: 0;
+}
+
+.search-container {
+    padding: 10px 20px;
+    text-align: center;
+    /* border: 1px solid red; */
+    position: relative;
+    /* margin-top: -200px; */
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.search-input {
+    width: 600px;
+    height: 40px;
+    padding: 0 10px; 
+    background: rgba(219, 226, 239, 0.5);
+    border: 1px solid green;
+    border-radius: 10px;
+}
+::placeholder {
+    color: white;
+    font-size: 1rem;
+}
+.search-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    background-color: var(--colorDark2);
+    background-image: url('./assets/search.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    outline: none;
+}
+/* .search-button {
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--colorDark2);
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.margin-down {
+    margin-top: 20px;
+}
+
+.grant-access {
+    /* border: 1px solid red; */
+    position: absolute;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* opacity: 0; */
+}
+
+.grant-location-image {
+    width: 80px;
+    height: 80px;
+}
+.grant-access-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.grant-access-subheading {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+.grant-access-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+    color: white;
+    background-color: var(--colorDark2);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.not-found{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+.not-found-image{
+    width: 300px;
+    height: 300px;
+}
+.not-found p {
+    text-align: center;
+}
+
+.loading-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.loading-image img{
+    width: 300px;
+    height: 300px;
+}
+

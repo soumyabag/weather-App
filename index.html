@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App | Soumya</title>
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Heading Section -->
+      <h1 class="heading">WEATHER APP</h1>
+
+      <!-- Tab Section -->
+      <div class="tab-section">
+        <p class="current-tab tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+      </div>
+
+      <div class="main-container">
+        <div class="grant-access nonactive" data-grantAccess>
+          <img
+            src="./assets/location.png"
+            alt=""
+            class="grant-location-image"
+          />
+          <p class="grant-access-heading">Grant Location Access</p>
+          <p class="grant-access-subheading">
+            Allow Access To Get Weather Information
+          </p>
+          <button class="grant-access-button" data-getAccessBtn>GRANT ACCESS</button>
+        </div>
+
+        <!-- Search Container -->
+        <div class="search-container" data-searchCity>
+          <form class="search-form">
+            <input
+              type="text"
+              placeholder="Search for city ..."
+              class="search-input"
+              data-inputCity
+            />
+            <input class="search-button" onclick="getLocationDetailsByCity()" />
+            <!-- <div class="search-button" data-button onclick="getLocationDetailsByCity()">
+            <img src="./assets/search.png" alt="" class="search-icon" width="20" height="20" loading="lazy" >
+          </div> -->
+          </form>
+        </div>
+
+        <!-- City Not Found Section -->
+        <div class="not-found nonactive" data-notFound>
+          <img src="./assets/not-found.png" alt="" class="not-found-image">
+          <p>City Not Found</p>
+        </div>
+
+        <!-- Loading Image section -->
+        <div class="loading-image nonactive" data-loadingImage>
+          <img src="./assets/loading.gif" alt="">
+        </div>
+
+        <!-- Current Location Weather Details -->
+        <!-- Container -->
+        <div class="container">
+          <div class="city-name">
+            <p class="city"></p>
+            <img src="" alt="" class="country-image" />
+          </div>
+          <p data-description class="desc"></p>
+          <img src="" alt="" data-weatherIcon class="weatherIcon" />
+          <p data-temperature class="temp"></p>
+
+          <div class="three-columns">
+            <div class="windspeed">
+              <img src="./assets/wind.png" alt="" />
+              <p>WIDNSPEED</p>
+              <p data-windSpeed></p>
+            </div>
+            <div class="windspeed humidity">
+              <img src="./assets/humidity.png" alt="" />
+              <p>HUMIDITY</p>
+              <p data-humidity></p>
+            </div>
+            <div class="windspeed clouds">
+              <img src="./assets/cloud.png" alt="" />
+              <p>CLOUDS</p>
+              <p data-cloud></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
